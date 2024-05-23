@@ -1,8 +1,3 @@
-# pylint: disable=missing-module-docstring
-# pylint: disable=missing-class-docstring
-# pylint: disable=missing-function-docstring
-
-
 from typing import Dict
 
 import pytest
@@ -38,15 +33,15 @@ def test_base_validator_with_small_data():
     validator = BaseValidator(data)
     with pytest.raises(ValueError) as exception_info:
         validator.validate()
-    assert str(exception_info.value) == "Name: min length is 3"
+    assert str(exception_info.value) == "Название: минимальная длина – 3."
 
 
 def test_base_validator_with_long_data():
-    data = {'name': 'this is a long name'}
+    data = {'name': 'это длинное имя'}
     validator = BaseValidator(data)
     with pytest.raises(ValueError) as exception_info:
         validator.validate()
-    assert str(exception_info.value) == "Name: max length is 10"
+    assert str(exception_info.value) == "Имя: максимальная длина – 10."
 
 
 def test_base_validator_with_empty_data():
@@ -54,7 +49,7 @@ def test_base_validator_with_empty_data():
     validator = BaseValidator(data)
     with pytest.raises(ValueError) as exception_info:
         validator.validate()
-    assert str(exception_info.value) == "Name: empty values not allowed"
+    assert str(exception_info.value) == "Имя: пустые значения не допускаются"
 
 
 def test_base_validator_without_required_data():
@@ -62,4 +57,4 @@ def test_base_validator_without_required_data():
     validator = BaseValidator(data)
     with pytest.raises(ValueError) as exception_info:
         validator.validate()
-    assert str(exception_info.value) == "Name: required field"
+    assert str(exception_info.value) == "Имя: обязательное поле"

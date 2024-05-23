@@ -1,7 +1,3 @@
-""" Module for the CreateProfessionPresenterInterface
-"""
-
-
 from abc import ABC, abstractmethod
 from typing import Dict
 
@@ -10,9 +6,9 @@ from src.interactor.dtos.create_profession_dtos \
 
 
 class CreateProfessionPresenterInterface(ABC):
-    """ Class for the Interface of the ProfessionPresenter
+    """ Класс интерфейса ProfessionPresenter
     """
     @abstractmethod
     def present(self, output_dto: CreateProfessionOutputDto) -> Dict:
-        """ Present the Profession
+        """ Представьте профессию
         """

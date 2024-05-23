@@ -1,7 +1,3 @@
-""" This module has definition of the Profession entity
-"""
-
-
 from dataclasses import dataclass, asdict
 
 from src.domain.value_objects import ProfessionId
@@ -9,7 +5,7 @@ from src.domain.value_objects import ProfessionId
 
 @dataclass
 class Profession:
-    """ Definition of the Profession entity
+    """ Определение сущности профессии
     """
     profession_id: ProfessionId
     name: str
@@ -17,11 +13,11 @@ class Profession:
 
     @classmethod
     def from_dict(cls, data):
-        """ Convert data from a dictionary
+        """ Преобразование данных из словаря
         """
         return cls(**data)
 
     def to_dict(self):
-        """ Convert data into dictionary
+        """ Преобразование данных в словарь
         """
         return asdict(self)

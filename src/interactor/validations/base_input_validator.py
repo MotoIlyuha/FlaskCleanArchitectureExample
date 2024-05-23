@@ -1,13 +1,10 @@
-""" This module provides the base class BaseInputValidator for input validation
-"""
-
 from typing import Dict
 
 from cerberus import Validator  # type: ignore
 
 
 class BaseInputValidator:
-    """ This class provides the base class for input validation
+    """ Этот класс предоставляет базовый класс для проверки ввода.
     """
 
     def __init__(self, data: Dict[str, str]):
@@ -15,10 +12,10 @@ class BaseInputValidator:
         self.errors: Dict = {}
 
     def verify(self, schema: Dict) -> None:
-        """ Validates the input data against the provided schema
-        :param schema: The schema to validate against
+        """ Проверяет входные данные на соответствие предоставленной схеме.
+        :param schema: Схема для проверки
         :return: None
-        :raises ValueError: If the input data is invalid.
+        :raises ValueError: Если входные данные недействительны.
         """
         validator = Validator(schema)
         if not validator.validate(self.data):

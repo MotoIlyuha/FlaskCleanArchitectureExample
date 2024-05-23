@@ -1,14 +1,10 @@
-""" This module contains the CliMemoryControllerInterface class
-"""
-
-
 from abc import ABC, abstractmethod
 
 
 class CliMemoryControllerInterface(ABC):
-    """ This class is the interface for the CliMemoryController class
+    """ Этот класс является интерфейсом для класса CliMemoryController.
     """
     @abstractmethod
     def execute(self):
-        """ Executes the controller
+        """ Выполняет контроллер
         """

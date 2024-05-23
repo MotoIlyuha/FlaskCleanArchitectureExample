@@ -3,17 +3,18 @@
 
 
 from abc import ABC, abstractmethod
-from src.domain.value_objects import ProfessionId
+
 from src.domain.entities.profession import Profession
+from src.domain.value_objects import ProfessionId
 
 
 class ProfessionRepositoryInterface(ABC):
-    """ This class is the interface for the ProfessionRepository
+    """ Этот класс является интерфейсом для ProfessionRepository.
     """
 
     @abstractmethod
     def get(self, profession_id: ProfessionId) -> Profession:
-        """ Get a Profession by id
+        """ Получить профессию по идентификатору
 
         :param profession_id: ProfessionId
         :return: Profession
@@ -21,7 +22,7 @@ class ProfessionRepositoryInterface(ABC):
 
     @abstractmethod
     def create(self, name: str, description: str) -> Profession:
-        """ Create a Profession
+        """ Создать профессию
 
         :param name: Profession Name
         :param description: Profession Description
@@ -30,7 +31,7 @@ class ProfessionRepositoryInterface(ABC):
 
     @abstractmethod
     def update(self, profession: Profession) -> Profession:
-        """ Save a Profession
+        """ Сохранить профессию
 
         :param Profession: Profession
         :return: Profession

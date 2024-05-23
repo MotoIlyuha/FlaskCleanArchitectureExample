@@ -1,8 +1,3 @@
-# pylint: disable=missing-module-docstring
-# pylint: disable=missing-class-docstring
-# pylint: disable=missing-function-docstring
-
-
 from src.domain.entities.profession import Profession
 from .profession_in_memory_repository import ProfessionInMemoryRepository
 

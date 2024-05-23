@@ -1,24 +1,21 @@
-""" Module for ProfessionInMemoryRepository
-"""
-
-
-from typing import Dict
 import copy
 import uuid
+from typing import Dict
+
 from src.domain.entities.profession import Profession
+from src.domain.value_objects import ProfessionId
 from src.interactor.interfaces.repositories.profession_repository \
     import ProfessionRepositoryInterface
-from src.domain.value_objects import ProfessionId
 
 
 class ProfessionInMemoryRepository(ProfessionRepositoryInterface):
-    """ InMemory Repository for Profession
+    """ Репозиторий InMemory для профессий
     """
     def __init__(self) -> None:
         self._data: Dict[ProfessionId, Profession] = {}
 
     def get(self, profession_id: ProfessionId) -> Profession:
-        """ Get Profession by id
+        """ Получить профессию по идентификатору
 
         :param profession_id: ProfessionId
         :return: Profession

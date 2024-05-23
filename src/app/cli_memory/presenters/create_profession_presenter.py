@@ -11,10 +11,10 @@ from src.interactor.interfaces.presenters.create_profession_presenter \
 
 
 class CreateProfessionPresenter(CreateProfessionPresenterInterface):
-    """ Class for the CreateProfessionPresenter
+    """ Класс для CreateProfessionPresenter
     """
     def present(self, output_dto: CreateProfessionOutputDto) -> Dict:
-        """ Present the CreateProfession
+        """ Представляем CreateProfession
         :param output_dto: CreateProfessionOutputDto
         :return: Dict
         """

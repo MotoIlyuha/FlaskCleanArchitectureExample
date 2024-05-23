@@ -1,9 +1,5 @@
-""" This module contains exceptions for the Use Cases layer
-"""
-
-
 class FieldValueNotPermittedException(Exception):
-    """ Exception raised when a field is empty """
+    """ Исключение возникает, когда поле пусто"""
 
     def __init__(self, field_name: str, field_value: str) -> None:
         self.field_name = field_name
