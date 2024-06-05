@@ -1,6 +1,7 @@
 """ This module contains the ProcessHandler for Cli that uses Memory repository
 """
 
+
 from src.app.cli_memory.controllers.create_profession_controller \
     import CreateProfessionController
 from src.app.cli_memory.controllers.exit_controller \
@@ -12,7 +13,6 @@ from src.app.cli_memory.interfaces.cli_memory_controller_interface \
 class CliMemoryProcessHandler:
     """ The ProcessHandler for Cli that uses Memory repository
     """
-
     def __init__(self):
         self.options = {}
 

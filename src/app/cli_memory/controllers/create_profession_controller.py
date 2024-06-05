@@ -13,7 +13,6 @@ from ..views.create_profession_view import CreateProfessionView
 class CreateProfessionController(CliMemoryControllerInterface):
     """ Create Profession Controller Class
     """
-
     def _get_profession_info(self) -> CreateProfessionInputDto:
         name = input("Enter the profession name:")
         description = input("Enter the profession description:")
