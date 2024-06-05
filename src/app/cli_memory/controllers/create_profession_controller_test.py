@@ -1,8 +1,3 @@
-# pylint: disable=missing-module-docstring
-# pylint: disable=missing-class-docstring
-# pylint: disable=missing-function-docstring
-
-
 from src.app.cli_memory.controllers.create_profession_controller \
     import CreateProfessionController
 from src.interactor.dtos.create_profession_dtos import CreateProfessionInputDto

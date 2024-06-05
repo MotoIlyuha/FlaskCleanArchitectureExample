@@ -1,8 +1,5 @@
-""" Module for CreateProfession Dtos
-"""
-
-
 from dataclasses import dataclass
+
 from src.domain.entities.profession import Profession
 
 

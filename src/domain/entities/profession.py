@@ -1,8 +1,5 @@
-""" This module has definition of the Profession entity
-"""
-
-
 from dataclasses import dataclass, asdict
+
 from src.domain.value_objects import ProfessionId
 
 

@@ -1,11 +1,6 @@
-# pylint: disable=missing-module-docstring
-# pylint: disable=missing-class-docstring
-# pylint: disable=missing-function-docstring
-
-
+from src.domain.entities.profession import Profession
 from src.interactor.dtos.create_profession_dtos \
     import CreateProfessionOutputDto
-from src.domain.entities.profession import Profession
 from .create_profession_presenter import CreateProfessionPresenter
 
 

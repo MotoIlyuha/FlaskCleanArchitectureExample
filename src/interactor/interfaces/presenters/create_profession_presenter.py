@@ -1,9 +1,6 @@
-""" Module for the CreateProfessionPresenterInterface
-"""
-
-
-from typing import Dict
 from abc import ABC, abstractmethod
+from typing import Dict
+
 from src.interactor.dtos.create_profession_dtos \
     import CreateProfessionOutputDto
 
