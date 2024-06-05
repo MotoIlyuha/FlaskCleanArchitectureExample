@@ -1,3 +1,7 @@
+""" Module for Value Objects
+"""
+
+
 import uuid
 
 
