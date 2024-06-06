@@ -1,11 +1,12 @@
-from src.domain.entities.profession import Profession
-from src.interactor.dtos.create_profession_dtos \
-    import CreateProfessionInputDto, CreateProfessionOutputDto
-from src.interactor.interfaces.presenters.create_profession_presenter \
+from src.domain.interfaces.presenters \
     import CreateProfessionPresenterInterface
-from src.interactor.interfaces.repositories.profession_repository \
+
+from src.application.dtos.create_profession_dtos \
+    import CreateProfessionInputDto, CreateProfessionOutputDto
+from src.application.use_cases import create_profession
+from src.domain.entities.profession import Profession
+from src.domain.interfaces.profession_repository \
     import ProfessionRepositoryInterface
-from src.interactor.use_cases import create_profession
 
 
 def test_create_profession(mocker, fixture_profession_developer):

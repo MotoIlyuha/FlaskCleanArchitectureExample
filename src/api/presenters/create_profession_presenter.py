@@ -4,10 +4,11 @@
 
 from typing import Dict
 
-from src.interactor.dtos.create_profession_dtos \
-    import CreateProfessionOutputDto
-from src.interactor.interfaces.presenters.create_profession_presenter \
+from src.domain.interfaces.presenters \
     import CreateProfessionPresenterInterface
+
+from src.application.dtos.create_profession_dtos \
+    import CreateProfessionOutputDto
 
 
 class CreateProfessionPresenter(CreateProfessionPresenterInterface):

@@ -1,6 +1,6 @@
-from src.domain.entities.profession import Profession
-from src.interactor.dtos.create_profession_dtos \
+from src.application.dtos.create_profession_dtos \
     import CreateProfessionOutputDto
+from src.domain.entities.profession import Profession
 from .create_profession_presenter import CreateProfessionPresenter
 
 

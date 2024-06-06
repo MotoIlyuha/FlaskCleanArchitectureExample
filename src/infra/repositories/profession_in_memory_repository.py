@@ -3,9 +3,9 @@ import uuid
 from typing import Dict
 
 from src.domain.entities.profession import Profession
-from src.domain.value_objects import ProfessionId
-from src.interactor.interfaces.repositories.profession_repository \
+from src.domain.interfaces.profession_repository \
     import ProfessionRepositoryInterface
+from src.domain.value_objects import ProfessionId
 
 
 class ProfessionInMemoryRepository(ProfessionRepositoryInterface):
@@ -13,6 +13,7 @@ class ProfessionInMemoryRepository(ProfessionRepositoryInterface):
     """
     def __init__(self) -> None:
         self._data: Dict[ProfessionId, Profession] = {}
+        self.professions = []
 
     def get(self, profession_id: ProfessionId) -> Profession:
         """ Получить профессию по идентификатору
@@ -21,6 +22,9 @@ class ProfessionInMemoryRepository(ProfessionRepositoryInterface):
         :return: Profession
         """
         return copy.deepcopy(self._data[profession_id])
+
+    def save(self, profession: Profession):
+        self.professions.append(profession)
 
     def create(self, name: str, description: str) -> Profession:
         profession = Profession(

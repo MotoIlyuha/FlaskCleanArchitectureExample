@@ -4,7 +4,7 @@
 
 import sys
 
-from src.app.cli_memory.interfaces.cli_memory_controller_interface \
+from src.application.cli_memory.interfaces.cli_memory_controller_interface \
     import CliMemoryControllerInterface
 
 

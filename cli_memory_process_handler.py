@@ -1,12 +1,11 @@
 """ This module contains the ProcessHandler for Cli that uses Memory repository
 """
 
-
-from src.app.cli_memory.controllers.create_profession_controller \
+from src.application.cli_memory.controllers.create_profession_controller \
     import CreateProfessionController
-from src.app.cli_memory.controllers.exit_controller \
+from src.application.cli_memory.controllers.exit_controller \
     import ExitController
-from src.app.cli_memory.interfaces.cli_memory_controller_interface \
+from src.application.cli_memory.interfaces.cli_memory_controller_interface \
     import CliMemoryControllerInterface
 
 

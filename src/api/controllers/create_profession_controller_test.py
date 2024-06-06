@@ -3,9 +3,10 @@
 # pylint: disable=missing-function-docstring
 
 
-from src.app.cli_memory.controllers.create_profession_controller \
+from src.application.cli_memory.controllers.create_profession_controller \
     import CreateProfessionController
-from src.interactor.dtos.create_profession_dtos import CreateProfessionInputDto
+
+from src.application.dtos.create_profession_dtos import CreateProfessionInputDto
 
 
 def test_create_profession(monkeypatch, mocker, fixture_profession_developer):
@@ -15,17 +16,17 @@ def test_create_profession(monkeypatch, mocker, fixture_profession_developer):
     monkeypatch.setattr('builtins.input', lambda _: next(fake_user_inputs))
 
     mock_repository = mocker.patch(
-        'src.app.cli_memory.controllers.create_profession_controller.\
+        'src.application.cli_memory.controllers.create_profession_controller.\
 ProfessionInMemoryRepository')
     mock_presenter = mocker.patch(
-        'src.app.cli_memory.controllers.create_profession_controller.\
+        'src.application.cli_memory.controllers.create_profession_controller.\
 CreateProfessionPresenter')
     mock_use_case = mocker.patch(
-        'src.app.cli_memory.controllers.create_profession_controller.\
+        'src.application.cli_memory.controllers.create_profession_controller.\
 CreateProfessionUseCase')
     mock_use_case_instance = mock_use_case.return_value
     mock_view = mocker.patch(
-        'src.app.cli_memory.controllers.create_profession_controller.\
+        'src.application.cli_memory.controllers.create_profession_controller.\
 CreateProfessionView')
     result_use_case = {
         "profession_id": fixture_profession_developer["profession_id"],
