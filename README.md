@@ -5,7 +5,7 @@
 
 ## При появлении запроса откройте каталог, в который хотите загрузить проект.
 ```
-git clone https://github.com/claudiosw/python-clean-architecture-example-1.git
+git clone https://github.com/MotoIlyuha/FlaskCleanArchitectureExample.git
 ```
 
 ## Создайте виртуальную среду:
